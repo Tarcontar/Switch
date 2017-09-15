@@ -3,8 +3,7 @@
 class Switch
 {
 	public:
-		Switch(int pin, bool inverted = false);
-		Switch(int pin, int led_pin, bool inverted = false);
+		Switch(int pin, bool inverted = false, int led_pin = -1);
 		
 		bool On();
 		bool Off();
