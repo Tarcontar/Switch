@@ -3,6 +3,7 @@
 class Switch
 {
 	public:
+		Switch();
 		Switch(int pin, bool inverted = false, int led_pin = -1);
 		
 		bool On();
@@ -12,7 +13,7 @@ class Switch
 
 		void LEDOn();
 		void LEDOff();
-
+		
 	private:
 		int		m_pin;
 		int		m_led_pin;

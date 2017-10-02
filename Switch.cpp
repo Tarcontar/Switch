@@ -1,6 +1,13 @@
 #include "Switch.h"
 #include <Arduino.h>
 
+Switch::Switch()
+{
+	m_pin = 0;
+	m_inverted = false;
+	m_led_pin = 0;
+}
+
 Switch::Switch(int pin, bool inverted, int led_pin) 
 {
 	m_pin = pin;
@@ -75,6 +82,7 @@ void Switch::LEDOff()
 
 void Switch::Read()
 {
-	//TODO: use m_inverted here
 	m_last_state = digitalRead(m_pin);
+	if (m_inverted)
+		m_last_state = !m_last_state;
 }
