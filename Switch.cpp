@@ -1,4 +1,4 @@
-#include "Switch.h"
+#include "Switch.hpp"
 #include <Arduino.h>
 
 Switch::Switch()
