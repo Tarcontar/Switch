@@ -14,6 +14,8 @@ class Switch
 		void LEDOn();
 		void LEDOff();
 		
+		bool connected();
+		
 	private:
 		int		m_pin;
 		int		m_led_pin;

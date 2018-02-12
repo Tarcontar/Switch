@@ -86,3 +86,11 @@ void Switch::Read()
 	if (m_inverted)
 		m_last_state = !m_last_state;
 }
+
+bool Switch::connected()
+{
+	int val = analogRead(m_pin);
+	if (20 > val || val > 850)
+		return true;
+	return false;
+}
