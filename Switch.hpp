@@ -14,7 +14,10 @@ class Switch
 		void LEDOn();
 		void LEDOff();
 		
-		bool connected();
+		//-1 not a analog pin
+		// 0  not connected
+		// 1 connected
+		int connected();
 		
 	private:
 		int		m_pin;

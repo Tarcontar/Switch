@@ -87,10 +87,14 @@ void Switch::Read()
 		m_last_state = !m_last_state;
 }
 
-bool Switch::connected()
+int Switch::connected()
 {
-	int val = analogRead(m_pin);
-	if (20 > val || val > 850)
-		return true;
-	return false;
+	if (isAnalogPin(m_pin))
+	{
+		int val = analogRead(m_pin);
+		if (20 > val || val > 850)
+			return 1;
+		return 0;
+	}
+	return -1;
 }
